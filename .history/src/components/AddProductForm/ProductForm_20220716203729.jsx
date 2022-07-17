@@ -26,6 +26,18 @@ const theme = createTheme({
 });
 
 function ProductForm(props) {
+  const values = [
+    "One",
+    "Two",
+    "Three",
+    "Four",
+    "Five",
+    "Six",
+    "Seven",
+    "Eight",
+    "Nine",
+    "Ten",
+  ];
   return (
     <Box
       sx={{
@@ -51,31 +63,31 @@ function ProductForm(props) {
               <label htmlFor="vendor">Vendor</label>
             </Grid>
             <Grid item xs={9}>
-              <InputField />
+              <InputField name="vendor" />
             </Grid>
             <Grid item xs={3} sx={{ margin: "auto 0" }}>
               <label htmlFor="productTitle">Product Title</label>
             </Grid>
             <Grid item xs={9}>
-              <InputField />
+              <InputField name="productTitle" />
             </Grid>
             <Grid item xs={3} sx={{ margin: "auto 0" }}>
               <label htmlFor="brand">Brand</label>
             </Grid>
             <Grid item xs={9}>
-              <SelectField />
+              <SelectField name="brand" valueList={values} />
             </Grid>
             <Grid item xs={3} sx={{ margin: "auto 0" }}>
               <label htmlFor="condition">Condition</label>
             </Grid>
             <Grid item xs={9}>
-              <SelectField />
+              <SelectField name="condition" valueList={values} />
             </Grid>
             <Grid item xs={3} sx={{ margin: "auto 0" }}>
               <label htmlFor="sku">SKU</label>
             </Grid>
             <Grid item xs={9}>
-              <InputField />
+              <InputField name="sku" />
             </Grid>
             <Grid item xs={3} sx={{ margin: "auto 0" }}>
               <label htmlFor="images">Images</label>
@@ -87,7 +99,7 @@ function ProductForm(props) {
               <label htmlFor="category">Category</label>
             </Grid>
             <Grid item xs={9}>
-              <SelectField />
+              <SelectField name="category" valueList={values} />
             </Grid>
             <Grid item xs={3} sx={{ margin: "auto 0" }}>
               <label htmlFor="description">Description</label>

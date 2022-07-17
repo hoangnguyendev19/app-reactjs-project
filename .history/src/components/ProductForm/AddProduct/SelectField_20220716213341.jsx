@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
 import { MenuItem, Select } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 
-SelectField.propTypes = {};
+SelectField.propTypes = {
+  name: PropTypes.string.isRequired,
+  valueList: PropTypes.array,
+};
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -20,43 +23,43 @@ const listProps = {
       maxHeight: ITEM_HEIGHT * 4.5 + ITEM_PADDING_TOP,
       width: 250,
     },
-    anchorOrigin: {
+    anchororigin: {
       vertical: "bottom",
       horizontal: "left",
     },
-    transformOrigin: {
+    transformorigin: {
       vertical: "top",
       horizontal: "left",
     },
   },
 };
 
-function SelectField() {
+function SelectField({ name = "", valueList = [] }) {
   const classes = useStyles();
+  const [value, setValue] = useState("");
+
+  const handleValueChange = (e) => {
+    setValue(e.target.value);
+  };
+
   return (
     <Select
-      // value="Type brand name to select"
-      //   onChange={handleChange}
-      id="brand"
-      name="brand"
+      value={value}
+      id={name}
+      onChange={handleValueChange}
       MenuProps={listProps}
       fullWidth
       displayEmpty
       size="small"
       className={classes.root}
     >
-      <MenuItem value="">
-        <em>Type brand name to select</em>
-      </MenuItem>
-      <MenuItem>Ten</MenuItem>
-      <MenuItem>Twenty</MenuItem>
-      <MenuItem>Thirty</MenuItem>
-      <MenuItem>Fourty</MenuItem>
-      <MenuItem>Fifty</MenuItem>
-      <MenuItem>Fifty</MenuItem>
-      <MenuItem>Fifty</MenuItem>
-      <MenuItem>Fifty</MenuItem>
-      <MenuItem>Fifty</MenuItem>
+      {valueList &&
+        valueList.length > 0 &&
+        valueList.map((value) => (
+          <MenuItem key={value} value={value}>
+            {value}
+          </MenuItem>
+        ))}
     </Select>
   );
 }

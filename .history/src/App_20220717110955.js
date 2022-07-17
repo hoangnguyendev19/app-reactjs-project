@@ -4,7 +4,6 @@ import AddProductForm from "./components/ProductForm/AddProduct/AddProductForm";
 import ProductListTable from "./components/ProductList/ProductListTable";
 import PricesForm from "./components/ProductForm/Prices/PricesForm";
 import ShippingForm from "./components/ProductForm/Shipping/ShippingForm";
-import MarketingForm from "./components/ProductForm/Marketing/MarketingForm";
 
 function App() {
   return (
@@ -17,7 +16,6 @@ function App() {
       <AddProductForm />
       <PricesForm />
       <ShippingForm />
-      <MarketingForm />
     </div>
   );
 }
