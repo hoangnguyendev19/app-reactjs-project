@@ -1,8 +1,8 @@
 import "./App.css";
 import ProductForm from "./components/ProductForm";
 import UserForm from "./components/UserForm";
-import ProductListTable from "./components/ProductList/ProductListTable";
-import UserListTable from "./components/UserList/UserListTable";
+import ProductListTable from "./components/ProductList";
+import UserListTable from "./components/UserList";
 import logo from "./logo.svg";
 
 function App() {

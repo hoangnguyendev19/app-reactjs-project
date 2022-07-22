@@ -10,8 +10,6 @@ import TableRow from "@mui/material/TableRow";
 import React, { useState } from "react";
 import ProductListRow from "./ProductListRow";
 
-ProductListTable.propTypes = {};
-
 const theme = createTheme({
   palette: {
     secondary: {
@@ -31,7 +29,7 @@ const TABLE_HEADER = [
   "Arrival Date",
 ];
 
-function ProductListTable(props) {
+function ProductList(props) {
   const [productList, setProductList] = useState([
     {
       id: 1,
@@ -122,9 +120,6 @@ function ProductListTable(props) {
                     sx={{
                       color: "#fff",
                     }}
-                    // indeterminate={numSelected > 0 && numSelected < rowCount}
-                    // checked={rowCount > 0 && numSelected === rowCount}
-                    // onChange={onSelectAllClick}
                     inputProps={{
                       "aria-label": "select all desserts",
                     }}
@@ -167,4 +162,4 @@ function ProductListTable(props) {
   );
 }
 
-export default ProductListTable;
+export default ProductList;

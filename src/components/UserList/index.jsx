@@ -10,8 +10,6 @@ import TableRow from "@mui/material/TableRow";
 import React, { useState } from "react";
 import UserListRow from "./UserListRow";
 
-UserListTable.propTypes = {};
-
 const theme = createTheme({
   palette: {
     secondary: {
@@ -32,7 +30,7 @@ const TABLE_HEADER = [
   "Last Login",
 ];
 
-function UserListTable(props) {
+function UserList(props) {
   const [userList, setUserList] = useState([
     {
       id: 1,
@@ -162,4 +160,4 @@ function UserListTable(props) {
   );
 }
 
-export default UserListTable;
+export default UserList;
