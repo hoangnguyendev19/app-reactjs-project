@@ -1,9 +1,9 @@
 import "./App.css";
 import ProductForm from "./components/ProductForm";
 import UserForm from "./components/UserForm";
-import ProductListTable from "./components/ProductList";
-import UserListTable from "./components/UserList";
 import logo from "./logo.svg";
+import ProductList from "./components/ProductList";
+import UserList from "./components/UserList";
 
 function App() {
   return (
@@ -11,9 +11,9 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>Product Form</p>
-        <ProductListTable />
+        <ProductList />
         <div>Wrapping</div>
-        <UserListTable />
+        <UserList />
       </header>
       <ProductForm />
       <UserForm />
