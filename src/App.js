@@ -1,14 +1,9 @@
 import "./App.css";
-import logo from "./logo.svg";
-import AddProductForm from "./components/ProductForm/AddProduct/AddProductForm";
+import ProductForm from "./components/ProductForm";
+import UserForm from "./components/UserForm";
 import ProductListTable from "./components/ProductList/ProductListTable";
-import PricesForm from "./components/ProductForm/Prices/PricesForm";
-import ShippingForm from "./components/ProductForm/Shipping/ShippingForm";
-import MarketingForm from "./components/ProductForm/Marketing/MarketingForm";
 import UserListTable from "./components/UserList/UserListTable";
-import CreateUserForm from "./components/UserForm/CreateUser/CreateUserForm";
-import AccessInfoForm from "./components/UserForm/AccessInfo/AccessInfoForm";
-import TaxInfoForm from "./components/UserForm/TaxInfo/TaxInfoForm";
+import logo from "./logo.svg";
 
 function App() {
   return (
@@ -20,13 +15,8 @@ function App() {
         <div>Wrapping</div>
         <UserListTable />
       </header>
-      <AddProductForm />
-      <PricesForm />
-      <ShippingForm />
-      <MarketingForm />
-      <CreateUserForm />
-      <AccessInfoForm />
-      <TaxInfoForm />
+      <ProductForm />
+      <UserForm />
     </div>
   );
 }
